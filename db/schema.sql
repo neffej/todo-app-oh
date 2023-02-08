@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS nuts_db;
+
+CREATE DATABASE nuts_db;
