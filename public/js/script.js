@@ -5,11 +5,13 @@ let formInput = document.querySelector('#formInput');
 formInput.addEventListener('submit', async (event) => {
     event.preventDefault();
     let todoInput = document.querySelector('#todo-input').value.trim();
+    console.log(todoInput);
 
-    const info = await fetch('/harvey', {
+    const info = await fetch('/todo', {
         method: "POST",
         body: JSON.stringify({
-            fromFrontEnd : todoInput
+            todoInput,
         }),
+        headers: { "Content-Type": "application/json" },
     });
 });
